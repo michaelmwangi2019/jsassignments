@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>JavaScript Fuctions</title>
+
+<link rel="stylesheet" type="text/css" href="schoolselection.css">
+
+</head>
+
+<body>
+
+<script src="grading.js">
+
+   
+  </script>
+
+    <form>
+
+    <h2><b>School selection System</b></h2>
+
+    <h3 style="color: red"><marquee>Student Primary Shool Category</marquee></h3>
+
+  <select id="cat">
+
+  <optgroup label="Select Locality">
+
+   <option value="urban">Urban</option>
+
+    <option value="rural">Rural</option>
+
+  </optgroup>
+
+</select>
+
+  <!--<input type="text" name="txtcategory" id="categorysec"><br>-->
+
+     
+  <div id="genderoptions">
+
+    <p id="genderlabel"> Gender:</p>
+
+    <label for="boys">Male</label>
+
+    <input type="radio" name="rdgender" id="boys" value="boys" style="box-shadow: 3px;"><br>
+
+     <label for="girls">Female</label>
+
+     <input type="radio" name="rdgender" id="girls" value="girls"><br><br>
+
+   </div>
+
+      English Marks:
+
+      <input type="number" name="englishtext" id="englishid" min="1" max="100"><br><br>
+
+      Kiswahili Maks:
+
+      <input type="number" name="kiswahilitext" id="kiswahiliid" min="1" max="100"><br><br>
+
+      Maths Marks:
+
+      <input type="number" name="mathstext" id="mathid" min="1" max="100"><br><br>
+
+      Science Marks:
+
+      <input type="number" name="sciencetext" id="scienceid" min="1" max="100"><br><br>
+
+      Religeon Marks:
+
+      <input type="number" name="religeontext" id="religeonid" min="1" max="100"><br><br>
+
+      <h4 id="validationid"></h4>
+
+      <h3>Total Marks:</h3>
+
+    <textarea id="results"></textarea><br><br>
+
+    <input type="button" value="Calculate Totals" name="btncalculate" onclick="computetotals()"><br><br>
+
+    <input type="button" value="Place Student" name="btnplacestudent" onclick="placestudent()"><br><br>
+
+    <textarea id="secschool" style="background-color: #D8D8D8"></textarea>
+  </form>
+  
+</body>
+
+</html>

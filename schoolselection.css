@@ -1,0 +1,55 @@
+form{
+	background-image:url(students3.jpg);
+	background-repeat: repeat-x;
+	border: 5px;
+	border-style: double;
+	width: 500px;
+	height: 600px;
+	text-align: center;
+	background-color: yellow;
+	font-family: Arial Rounded MT Bold;
+	}
+
+	h2{
+		font-size: 40px;
+		color:
+		border: 2px;
+		font
+		background-color: #A4A4A4;
+		position: relative;
+		font-weight: bolder;
+		display: inline;
+		top: 5px;
+	}
+
+	#cat{
+		display: inline;
+		position: relative;
+		left: 50px;
+		top: 100px;
+	}
+
+	#categorysec{
+		display: inline;
+		position: absolute;
+		left: 10px;
+	}
+
+#genderlabel{
+		display: inline;
+		position: absolute;
+}
+
+#genderoptions{
+		display: inline;
+		position: absolute;
+		top: 70px;
+		left: 50px;
+
+}
+#cat{
+	display: inline;
+	position: absolute;
+	top: 70px;
+	left: 389px;
+}

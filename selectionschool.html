@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>JavaScript Fuctions</title>
+
+<link rel="stylesheet" type="text/css" href="schoolselection.css">
+
+
+
+</head>
+
+<body>
+
+
+
+<script type="text/javascript">
+
+    var totalmarks=0;
+
+    var Category=document.getElementById("categorysec").value;
+
+
+
+    var Gender;
+
+    function computetotals(){
+
+
+
+    var english=document.getElementById("englishid").value;
+
+    var kiswahili=document.getElementById("kiswahiliid").value;
+
+    var math=document.getElementById("mathsid").value;
+
+    var science=document.getElementById("scienceid").value;
+
+    var religeon=document.getElementById("religeonid").value;
+
+    totalmarks=(parseInt(math)+parseInt(kiswahili)+parseInt(english)+parseInt(science)+parseInt(religeon));
+
+    document.getElementById("results").innerHTML=totalmarks; 
+
+    }
+
+
+
+    function placestudent() {
+
+
+
+      if(document.getElementById("boys").checked){
+
+        Gender=document.getElementById("boys").value;
+
+      }
+
+      else{
+
+        Gender=document.getElementById("girls").value;
+
+      }
+
+    
+
+    if((Category=="urban") && (Gender=="boys") && totalmarks>430){
+
+       document.getElementById("secschool").innerHTML="Natioal Boys School";
+
+    }
+
+     else if (totalmarks>420 && (Gender=="girls")){
+
+       document.getElementById("secschool").innerHTML="Natioal Girls School";
+
+    }
+
+    else if (totalmarks>420 && (Gender=="boys")){
+
+       document.getElementById("secschool").innerHTML="National Boys School";
+
+      }
+
+    else if (totalmarks> 410 && (Gender=="girls")){
+
+       document.getElementById("secschool").innerHTML="Natinoal Girls School";
+
+     }
+
+    else if (totalmarks> 370 && Gender=="boys"){
+
+       document.getElementById("secschool").innerHTML="County Boys School";
+
+     }
+
+    else if (totalmarks> 350 && Gender=="girls"){
+
+       document.getElementById("secschool").innerHTML="County Girls School";
+
+     }
+
+     else if (totalmarks> 360 && Gender=="boys"){
+
+       document.getElementById("secschool").innerHTML="County Boys School";
+
+     }
+
+     else if (totalmarks> 330 && Gender=="girls"){
+
+       document.getElementById("secschool").innerHTML="County Girls School";
+
+     }
+
+     else if (1<totalmarks<370 && Gender=="boys"){
+
+       document.getElementById("secschool").innerHTML="Sub-County Boys School";
+
+     }
+
+     else if (1<totalmarks<350 && Gender=="girls"){
+
+       document.getElementById("secschool").innerHTML="Sub-County Girls School";
+
+     }
+
+     else if (1<totalmarks<360 && Gender=="boys"){
+
+       document.getElementById("secschool").innerHTML="Sub-County Boys School";
+
+     }
+
+     else if (1<totalmarks<330 && Gender=="girls"){
+
+       document.getElementById("secschool").innerHTML="Sub-County Girls School";
+
+     }
+
+
+
+        else{
+
+            document.getElementById("secschool").innerHTML="No School available for student";
+
+      }
+
+    }
+
+    
+
+  </script>
+
+
+
+    <form>
+
+      <h2>School selection System</h2>
+
+      <h3>Student Primary Shool Category</h3>
+
+      
+
+  <select>
+
+  <optgroup label="Select Locality">
+
+   <option>Urban</option>
+
+    <option>Rural</option>
+
+  </optgroup>
+
+</select>
+
+  <input type="text" name="txtcategory" id="categorysec"><br>
+
+      Gender:<br>
+
+    <label for="boys">Male</label>
+
+    <input type="radio" name="rdgender" id="boys" value="boys"><br>
+
+     <label for="girls">Female</label>
+
+     <input type="radio" name="rdgender" id="girls" value="girls"><br><br>
+
+      English Marks:
+
+      <input type="number" name="englishtext" id="englishid"><br><br>
+
+      Kiswahili Maks:
+
+      <input type="number" name="kiswahilitext" id="kiswahiliid"><br><br>
+
+      Maths Marks:
+
+      <input type="number" name="mathstext" id="mathsid"><br><br>
+
+      Science Marks:
+
+      <input type="number" name="sciencetext" id="scienceid"><br><br>
+
+      Religeon Marks:
+
+      <input type="number" name="religeontext" id="religeonid"><br><br>
+
+      <h3>Total Marks:</h3>
+
+    <textarea id="results"></textarea><br><br>
+
+ 
+
+    <input type="button" value="Calculate Totals" name="btncalculate" onclick="computetotals()"><br><br>
+
+    <input type="button" value="Place Student" name="btnplacestudent" onclick="placestudent()"><br><br>
+
+    <textarea id="secschool" style="background-color: #D8D8D8"></textarea>
+
+  </form>
+
+
+
+</body>
+
+
+
+</html>
